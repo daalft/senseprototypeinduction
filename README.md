@@ -15,7 +15,7 @@ result = pi.full_induction(ctx_idx_ids, step_threshold)
 ```
 
 ## Example input
-Data taken from the 2025 Shared Task on Navigating Disagreements in NLP Annotations (CoMeDi)[https://comedinlp.github.io/]
+Data taken from the 2025 Shared Task on Navigating Disagreements in NLP Annotations [CoMeDi](https://comedinlp.github.io/)
 ```
 [('Die Projektgruppe" Bänder, Blech und auch Double", die Gruppe" Unsere Schule, unterwegs nach Europa" und der MLLV-Arbeitskreis" Offene Lernformen im Fachunterricht".',
    (27, 32),
