@@ -1,6 +1,11 @@
 # senseprototypeinduction
 Word sense prototype induction
 
+# Package requirements
+This script requires the following packages:
+- numpy
+- WordTransformer
+
 # Example usage
 ```
 from prototypeinduction import PrototypeInduction
