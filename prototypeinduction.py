@@ -1,12 +1,9 @@
 import os
 import random
 import numpy as np
-import pandas as pd
 from numpy import dot
-from tqdm import tqdm
 from numpy.linalg import norm
 from collections import Counter
-from scipy.spatial.distance import cosine
 from WordTransformer import WordTransformer,InputExample
 
 class PrototypeInduction:
@@ -24,7 +21,14 @@ class PrototypeInduction:
         return arr_agg
     
     def my_sim_fn(self, a, b):
-        return 1-cosine(a,b)
+        u = np.asarray(a, dtype=float)
+        v = np.asarray(b, dtype=float)
+        if not np.any(u) or not np.any(v):
+            return 0.0
+        dot_product = np.dot(u, v)
+        norm_u = np.sqrt(np.dot(u, u))
+        norm_v = np.sqrt(np.dot(v, v))
+        return dot_product / (norm_u * norm_v)
 
     def similarities(self, induced_sense, step_senses, similarity_function=None):
         if not similarity_function:
