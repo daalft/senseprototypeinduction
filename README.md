@@ -9,13 +9,14 @@ pi = PrototypeInduction()
 step_threshold = 0.4
 # the expected format is a list of tuples with a context (sentence),
 # indices of the target word in characters (as tuple), and unique identifier
+# see example below (Example input)
 ctx_idx_ids = ...
 # result contains the input data with an additional element indicating the cluster
 result = pi.full_induction(ctx_idx_ids, step_threshold) 
 ```
 
 ## Example input
-Data taken from the 2025 Shared Task on Navigating Disagreements in NLP Annotations [CoMeDi](https://comedinlp.github.io/)
+Data taken from the 2025 Shared Task on Navigating Disagreements in NLP Annotations ([CoMeDi](https://comedinlp.github.io/))
 ```
 [('Die Projektgruppe" Bänder, Blech und auch Double", die Gruppe" Unsere Schule, unterwegs nach Europa" und der MLLV-Arbeitskreis" Offene Lernformen im Fachunterricht".',
    (27, 32),
